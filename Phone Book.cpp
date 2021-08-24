@@ -30,14 +30,14 @@ int main()
 		//Diplay contacts
 		else if (check==2)
 		{
-			int check2=0;
+			bool check2=1;
 			for(int i=0; i<100;i++)
 			{
 				if(name[i]!="\0")
 				cout<<"\t\t\t\t\t Name :"<<name[i]<< "      Phone :"<<no[i]<<endl;
-				check2++;
+				check2=0;
 			}
-			if(check2==0)
+			if(check2)
 			{
 				cout<<"\t\t\t\t\t";
 			}
@@ -48,17 +48,17 @@ int main()
 			string temp;
 			cout<<"\t\t\t\t\tNumber : ";
 			cin>>temp;
-			int check2=0;
+			bool check2=1;
 			for(int i=0;i<100;i++)
 			{
 				if(temp==no[i])
 				{
 					cout<<"\t\t\t\t\tNumber is Found\n";
 					cout<<"\t\t\t\t\tName : "<<name[i]<<"       Phone : "<<no[i]<<endl;
-					check2++;
+					check2=0;
 				}
 			}
-			if(check2==0)
+			if(check2)
 			{
 				cout<<"\t\t\t\t\t This Number is Not found in your contact list\n";
 			}
@@ -69,18 +69,18 @@ int main()
 				string temp;
 			cout<<"\t\t\t\t\tName : ";
 			cin>>temp;
-			int check2=0;
+			bool check2=1;
 			for(int i=0;i<100;i++)
 			{
 				if(temp==name[i])
 				{
 					cout<<"\t\t\t\t\tName is Found\n";
 					cout<<"\t\t\t\t\tName : "<<name[i]<<"       Phone : "<<no[i]<<endl;
-					check2++;
+					check2=0;
 				}
 
 			}
-			if(check2==0)
+			if(check2)
 			{
 				cout<<"\t\t\t\t\t This name is Not found in your contact list\n";
 			}
@@ -118,7 +118,7 @@ int main()
 				string temp;
 			cout<<"\t\t\t\t\tFor Delete Enter Name : ";
 			cin>>temp;
-			int check2=0;
+			bool check2=1;
 			for(int i=0;i<100;i++)
 			{
 				if(temp==name[i])
@@ -127,11 +127,11 @@ int main()
 					cout<<"\t\t\t\t\tName : "<<name[i]<<"       Phone : "<<no[i]<<endl;
 					name[i]="\0";
 					no[i]="\0";
-					check2++;
+					check2=0;
 					Total_contacts--;
 				}
 			}
-			if(check2==0)
+			if(check2)
 			{
 				cout<<"\t\t\t\t\t This name is Not found in your contact list\n";
 			}
